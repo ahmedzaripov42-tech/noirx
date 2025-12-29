@@ -1,0 +1,58 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#020617;color:#fff;overflow-x:hidden}
+
+/* HEADER */
+.header{display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:#020617;position:sticky;top:0;z-index:1000}
+.logo-wrap{display:flex;align-items:center;gap:6px}
+.logo{color:#a855f7;font-weight:700;font-size:22px}
+.snowman{font-size:22px}
+.search{background:#020617;border:1px solid #334155;color:white;padding:8px 12px;border-radius:10px}
+
+/* HERO */
+.hero{height:70vh;background:url("https://images.unsplash.com/photo-1519681393784-d120267933ba") center/cover;display:flex;align-items:center;padding:30px;position:relative}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(2,6,23,.5),#020617)}
+.hero-content{position:relative}
+.hero h1{font-size:48px;color:#f9a8d4}
+
+/* SEO TEXT */
+.seo-text p{max-width:800px;line-height:1.7;color:#cbd5f5}
+
+/* BLOCK */
+.block{padding:25px}
+.block h2{margin-bottom:10px;color:#e879f9}
+
+/* GENRE */
+.cards{display:flex;gap:14px;flex-wrap:wrap}
+.card{min-width:160px;height:90px;border-radius:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-weight:bold}
+
+/* GENRE BACKGROUNDS */
+.romantika{background:linear-gradient(135deg,#f472b6,#ec4899)}
+.drama{background:linear-gradient(135deg,#818cf8,#6366f1)}
+.fantastika{background:linear-gradient(135deg,#34d399,#10b981)}
+.jangari{background:linear-gradient(135deg,#fb7185,#ef4444)}
+.psixologik{background:linear-gradient(135deg,#a78bfa,#7c3aed)}
+.sarguzasht{background:linear-gradient(135deg,#fbbf24,#f59e0b)}
+
+.card:hover{transform:translateY(-4px);transition:.3s}
+
+/* MANHWA */
+.manhwa-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:16px}
+.manhwa-card{background:#020617;border-radius:14px;overflow:hidden;border:1px solid #334155}
+.manhwa-card img{width:100%;height:220px;object-fit:cover}
+.manhwa-info{padding:10px}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.8);display:none;align-items:center;justify-content:center}
+.modal-box{background:#020617;padding:25px;border-radius:16px;border:1px solid #a855f7}
+.modal-btns button{margin:10px;padding:10px 20px;border:none;border-radius:10px}
+
+/* SNOW */
+#snow{position:fixed;inset:0;pointer-events:none;z-index:999}
+.snowflake{position:absolute;top:-10px;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(110vh)}}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1{font-size:32px}
+  .cards{flex-direction:column}
+}
