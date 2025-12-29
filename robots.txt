@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmedzaripov42-tech.github.io/noirx/sitemap.xml
